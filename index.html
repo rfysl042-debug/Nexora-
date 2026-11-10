@@ -1,97 +1,30 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#101124" />
-    <meta name="description" content="Nexora لشحن الألعاب، تطبيقات التواصل الاجتماعي، والبطاقات والأرصدة الرقمية." />
-    <title>Nexora | شحن الألعاب والتطبيقات</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="announcement"><span class="announcement-dot"></span> شحن رقمي سريع وآمن — اختر المنتج وأدخل بيانات حسابك بدقة</div>
-    <header class="site-header">
-      <div class="container nav-bar">
-        <a class="brand-wrap" href="#home" aria-label="Nexora الرئيسية">
-          <span class="brand-logo">N</span>
-          <span><strong class="brand-name">Nexora</strong><small>عالمك الرقمي</small></span>
-        </a>
-        <nav class="nav-links" aria-label="التنقل الرئيسي">
-          <a href="#home">الرئيسية</a><a href="#categories">الأقسام</a><a href="#products">المنتجات</a><a href="#how-it-works">كيف نعمل؟</a>
-        </nav>
-        <div class="nav-actions">
-          <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="ابحث عن لعبة أو تطبيق" aria-label="ابحث عن منتج" /></label>
-          <button id="cartToggle" class="cart-button" aria-label="فتح سلة الشراء">السلة <span id="cartCount">0</span></button>
-        </div>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#101124" />
+  <meta name="description" content="Nexora لشحن الألعاب وتطبيقات التواصل والبطاقات والأرصدة الرقمية." /><title>Nexora | شحن رقمي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="portal.css" />
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> منصة Nexora — شحن الألعاب والتطبيقات والأرصدة</div>
+  <header class="site-header"><div class="container nav-bar">
+    <a class="brand-wrap" href="#home"><span class="brand-logo">N</span><span><strong class="brand-name">Nexora</strong><small>عالمك الرقمي</small></span></a>
+    <nav class="nav-links" aria-label="التنقل"><a href="#home">الرئيسية</a><a href="#categories">الأقسام</a><a href="#products">المنتجات</a><a href="#how-it-works">كيف نعمل؟</a></nav>
+    <div class="nav-actions"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="ابحث عن منتج" aria-label="بحث" /></label><button id="accountToggle" class="portal-button">دخول / حساب</button><button id="adminToggle" class="portal-button admin-trigger" hidden>الإدارة</button><button id="cartToggle" class="cart-button">السلة <span id="cartCount">0</span></button></div>
+  </div></header>
+  <main id="home">
+    <section class="hero section"><div class="container hero-grid"><div class="hero-content"><span class="eyebrow"><span class="live-dot"></span> وجهتك للشحن الرقمي</span><h1>اشحن لعبتك، تطبيقك، أو رصيدك <span>بكل سهولة.</span></h1><p>اختر الخدمة والباقة، أدخل معرّف الحساب المطلوب، ثم ادفع بأمان عبر صفحة الدفع المحمية.</p><div class="hero-actions"><a href="#products" class="primary-btn">اكتشف المنتجات ←</a><a href="#how-it-works" class="text-link">كيف تتم عملية الشحن؟</a></div><div class="trust-row"><span>دفع آمن عبر Stripe</span><span>لا نطلب كلمة المرور</span><span>حساب لمتابعة الطلبات</span></div></div><div class="hero-art" aria-label="ألعاب وتطبيقات وبطاقات رقمية"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-tile tile-game"><span>🎮</span><small>شحن ألعاب</small><strong>GAME ON</strong></div><div class="hero-tile tile-social"><span>📱</span><small>تطبيقات التواصل</small><strong>GO SOCIAL</strong></div><div class="hero-tile tile-wallet"><span>⚡</span><small>بطاقات وأرصدة</small><strong>TOP UP</strong></div><div class="hero-center">N<span>+</span></div></div></div></section>
+    <section class="section categories-section" id="categories"><div class="container"><div class="section-heading"><div><span class="eyebrow">تصفح المتجر</span><h2>ماذا تريد أن تشحن؟</h2></div></div><div class="category-grid">
+      <button class="category-card active" data-category="all"><span class="category-icon">✦</span><span><strong>كل المنتجات</strong><small>تصفح المتجر بالكامل</small></span><b>←</b></button><button class="category-card" data-category="games"><span class="category-icon purple">🎮</span><span><strong>شحن الألعاب</strong><small>نقاط وعملات الألعاب</small></span><b>←</b></button><button class="category-card" data-category="social"><span class="category-icon pink">📲</span><span><strong>تطبيقات التواصل</strong><small>خدمات وباقات اجتماعية</small></span><b>←</b></button><button class="category-card" data-category="balance"><span class="category-icon green">💳</span><span><strong>بطاقات وأرصدة</strong><small>رصيد رقمي وبطاقات</small></span><b>←</b></button>
+    </div></div></section>
+    <section class="section products-section" id="products"><div class="container"><div class="section-heading products-heading"><div><span class="eyebrow">اختيارات Nexora</span><h2>منتجات رقمية مميزة</h2><p>الأسعار المعروضة إرشادية وتُحسب مجددًا على الخادم عند الدفع.</p></div><div id="filterLabel" class="filter-label">كل المنتجات</div></div><div id="productGrid" class="product-grid" aria-live="polite"></div><p id="emptyState" class="empty-state" hidden>لم نعثر على منتجات مطابقة.</p></div></section>
+    <section class="section steps-section" id="how-it-works"><div class="container"><div class="section-heading"><div><span class="eyebrow">سهولة وأمان</span><h2>كيف تطلب شحنتك؟</h2></div></div><div class="steps-grid"><article class="step-card"><span>01</span><div class="step-icon">🛍️</div><h3>اختر المنتج والباقة</h3><p>حدد اللعبة أو التطبيق أو البطاقة والباقة المناسبة.</p></article><article class="step-card"><span>02</span><div class="step-icon">🧾</div><h3>أدخل بيانات الشحن</h3><p>اكتب معرّف اللاعب أو رقم الجوال. لا تدخل كلمة مرورك.</p></article><article class="step-card"><span>03</span><div class="step-icon">🔒</div><h3>ادفع وتابع الطلب</h3><p>أكمل الدفع لدى Stripe، ثم تابع حالة الطلب من حسابك.</p></article></div><div class="notice"><strong>تنبيه أمني</strong><span>لا نطلب كلمة مرور حسابك. أدخل فقط المعرّف أو رقم الهاتف المطلوب للمنتج.</span></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand-wrap" href="#home"><span class="brand-logo">N</span><span><strong class="brand-name">Nexora</strong><small>عالمك الرقمي</small></span></a><p>© <span id="year"></span> Nexora — متجر الشحن الرقمي.</p><span id="apiStatus" class="api-status">جارٍ الاتصال...</span></div></footer>
 
-    <main id="home">
-      <section class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-content">
-            <span class="eyebrow"><span class="live-dot"></span> وجهتك للشحن الرقمي</span>
-            <h1>اشحن لعبتك، تطبيقك، أو رصيدك <span>بكل سهولة.</span></h1>
-            <p>اختر الخدمة المناسبة، حدّد الباقة، وأرسل طلبك. كل احتياجاتك الرقمية في مكان واحد.</p>
-            <div class="hero-actions"><a href="#products" class="primary-btn">اكتشف المنتجات <span>←</span></a><a href="#how-it-works" class="text-link">كيف تتم عملية الشحن؟</a></div>
-            <div class="trust-row"><span>✦ منتجات رقمية متنوعة</span><span>✦ خطوات طلب واضحة</span><span>✦ دعم عند الحاجة</span></div>
-          </div>
-          <div class="hero-art" aria-label="ألعاب وتطبيقات وبطاقات رقمية">
-            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-            <div class="hero-tile tile-game"><span>🎮</span><small>شحن ألعاب</small><strong>GAME ON</strong></div>
-            <div class="hero-tile tile-social"><span>📱</span><small>تطبيقات التواصل</small><strong>GO SOCIAL</strong></div>
-            <div class="hero-tile tile-wallet"><span>⚡</span><small>بطاقات وأرصدة</small><strong>TOP UP</strong></div>
-            <div class="hero-center">N<span>+</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section categories-section" id="categories">
-        <div class="container"><div class="section-heading"><div><span class="eyebrow">تصفح المتجر</span><h2>ماذا تريد أن تشحن؟</h2></div></div>
-          <div class="category-grid">
-            <button class="category-card active" data-category="all"><span class="category-icon">✦</span><span><strong>كل المنتجات</strong><small>تصفح المتجر بالكامل</small></span><b>←</b></button>
-            <button class="category-card" data-category="games"><span class="category-icon purple">🎮</span><span><strong>شحن الألعاب</strong><small>نقاط وعملات الألعاب</small></span><b>←</b></button>
-            <button class="category-card" data-category="social"><span class="category-icon pink">📲</span><span><strong>تطبيقات التواصل</strong><small>خدمات وباقات اجتماعية</small></span><b>←</b></button>
-            <button class="category-card" data-category="balance"><span class="category-icon green">💳</span><span><strong>بطاقات وأرصدة</strong><small>رصيد رقمي وبطاقات</small></span><b>←</b></button>
-          </div>
-        </div>
-      </section>
-
-      <section class="section products-section" id="products">
-        <div class="container">
-          <div class="section-heading products-heading"><div><span class="eyebrow">اختيارات Nexora</span><h2>منتجات رقمية مميزة</h2><p>اختر المنتج والباقة، ثم أضفه إلى السلة.</p></div><div id="filterLabel" class="filter-label">كل المنتجات</div></div>
-          <div id="productGrid" class="product-grid" aria-live="polite"></div>
-          <p id="emptyState" class="empty-state" hidden>لم نعثر على منتجات مطابقة. جرّب كلمة بحث أخرى.</p>
-        </div>
-      </section>
-
-      <section class="section steps-section" id="how-it-works">
-        <div class="container"><div class="section-heading"><div><span class="eyebrow">سهلة وواضحة</span><h2>كيف تطلب شحنتك؟</h2></div></div>
-          <div class="steps-grid"><article class="step-card"><span>01</span><div class="step-icon">🛍️</div><h3>اختر الخدمة</h3><p>حدد اللعبة أو التطبيق أو البطاقة والباقة المناسبة.</p></article><article class="step-card"><span>02</span><div class="step-icon">🧾</div><h3>أدخل بيانات الحساب</h3><p>اكتب معرّف اللاعب أو اسم المستخدم المطلوب للمنتج.</p></article><article class="step-card"><span>03</span><div class="step-icon">📨</div><h3>أرسل طلبك</h3><p>أضف رقم التواصل وأرسل تفاصيل الطلب للمراجعة والتنفيذ.</p></article></div>
-          <div class="notice"><strong>تنبيه مهم</strong><span>لا نطلب كلمة مرور حسابك. أدخل فقط المعرّف أو اسم المستخدم المطلوب للمنتج، وتأكد من صحته قبل إرسال الطلب.</span></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer"><div class="container footer-inner"><a class="brand-wrap" href="#home"><span class="brand-logo">N</span><span><strong class="brand-name">Nexora</strong><small>عالمك الرقمي</small></span></a><p>متجر شحن الألعاب والتطبيقات والأرصدة الرقمية.</p><small>© <span id="year"></span> Nexora. جميع الحقوق محفوظة.</small></div></footer>
-
-    <div id="cartOverlay" class="cart-overlay"></div>
-    <aside id="cartPanel" class="cart-panel" aria-label="سلة الشراء" aria-hidden="true">
-      <div class="cart-header"><div><span class="eyebrow">طلبك</span><h2>سلة الشراء</h2></div><button id="closeCart" class="close-cart" aria-label="إغلاق السلة">×</button></div>
-      <div id="cartItems" class="cart-items"></div>
-      <div class="cart-bottom"><div class="summary-row total"><span>الإجمالي</span><strong id="total">0.00 ر.س</strong></div>
-        <form id="checkoutForm" class="checkout-form">
-          <label>رقم التواصل<input type="tel" name="phone" placeholder="05xxxxxxxx" autocomplete="tel" required /></label>
-          <label>ملاحظات للطلب <textarea name="notes" rows="2" placeholder="اختياري"></textarea></label>
-          <p class="demo-note">إرسال الطلب هنا تجريبي؛ لا تتم معالجة الدفع إلكترونيًا في هذه النسخة.</p>
-          <button type="submit" class="primary-btn full-width">إرسال تفاصيل الطلب</button>
-        </form>
-      </div>
-    </aside>
-    <div id="toast" class="toast" role="status" aria-live="polite"></div>
-    <script src="script.js"></script>
-  </body>
-</html>
+  <div id="cartOverlay" class="cart-overlay"></div><aside id="cartPanel" class="cart-panel" aria-label="سلة الشراء" aria-hidden="true"><div class="cart-header"><div><span class="eyebrow">طلبك</span><h2>سلة الشراء</h2></div><button id="closeCart" class="close-cart" aria-label="إغلاق">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-bottom"><div class="summary-row total"><span>الإجمالي التقديري</span><strong id="total">0.00 ر.س</strong></div><form id="checkoutForm" class="checkout-form"><label>ملاحظات الطلب<textarea name="notes" rows="2" maxlength="500" placeholder="اختياري"></textarea></label><p class="demo-note">ستنتقل إلى صفحة دفع آمنة. لا تحفظ بيانات البطاقة في Nexora.</p><button type="submit" class="primary-btn full-width">المتابعة إلى الدفع</button></form></div></aside>
+  <div id="portalOverlay" class="portal-overlay" hidden><section class="portal-modal" role="dialog" aria-modal="true" aria-labelledby="portalTitle"><button class="portal-close" data-close-portal aria-label="إغلاق">×</button><div id="portalContent"></div></section></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div><script src="script.js"></script>
+</body></html>

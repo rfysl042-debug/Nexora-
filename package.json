@@ -1,0 +1,21 @@
+{
+  "name": "nexora-digital-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Arabic digital top-up storefront for games, social apps and balances",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "connect-sqlite3": "^0.9.16",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "helmet": "^8.1.0",
+    "stripe": "^17.7.0"
+  }
+}
